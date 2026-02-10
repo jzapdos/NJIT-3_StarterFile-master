@@ -31,38 +31,42 @@
 
 	    </div>
  
-	    <div class="main">
- 
-	      <div class="row">
-
-	        <div class="col-md-6">
-	            <div class="thumbnail">
-
-						<img class="poster img-fluid"
-						:src="movies[0].poster[movies[0].posterindex]"
-						:alt="movies[0].title + 'poster'">
-						<div class="imageInfo">{{ movies[0].posterindex}}</div>
-
-						<p class="title">{{ movies[0].title}} ({{movies[0].country}})</p>
-						<p class="score">
-							<i class="bi bi-star" aria-hidden="true"></i> {{ movies[0].iscore}} </p>
-						<p class="runtime">Runtime: {{movies[0].runtime}}</p>
-						<p class="released">Released: {{movies[0].released}} | Rated: {{movies[0].rating}} </p>
-						<p class="websites">Websites: <a :href = "movies[0].imdb"> IMDB </a> | <a :href="movies[0].website">website</a></p>
-
-			            <div class="social">
-			              <p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{movies[0].likes}}</p>
-			              <p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{movies[0].dislikes}}</p>
-			            </div>
-	            </div>
-	        </div>
-
-	      </div>
-	    </div>
+		<div class="main">
+			<div class="row" v-if="movies.length">
+			  <div class="col-md-6" v-for="(movie, index) in movies">
+				<div class="thumbnail">
+		  
+				  <img class="poster img-fluid"
+					   :src="movie.posters[movie.posterindex]"
+					   @click="posterClick(index)"
+					   :alt="movie.title + ' poster'">
+		  
+				  <div class="imageInfo">{{ movie.posterindex }}</div>
+		  
+				  <p class="title">{{ movie.title }} ({{ movie.country }})</p>
+				  <p class="score"><i class="bi bi-star"></i> {{ movie.iscore }}</p>
+				  <p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
+				  <p class="released">
+					Released: {{ getMonthText(movie.released) }} | Rated: {{ movie.rating }}
+				  </p>
+				  <p class="websites">
+					Websites:
+					<a :href="movie.imdb" target="_blank">IMDB</a> |
+					<a :href="movie.website" target="_blank">Website</a>
+				  </p>
+		  
+				  <div class="social">
+					<p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up"></i> {{ movie.likes }}</p>
+					<p class="dislikes"  @click="dislike(index)"><i class="bi bi-hand-thumbs-down"></i> {{ movie.dislikes }}</p>
+				  </div>
+		  
+				</div>
+			  </div>
+			</div>
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning" :href="github" target="_blank">
+			<a id="github"  target="_blank" :href="github" class="btn btn-lg btn-warning" :href="github" target="_blank">
 				<i class="bi bi-github me-2"></i>{{owner}}
 			  </a>
 	      </div>
