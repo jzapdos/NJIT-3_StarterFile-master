@@ -41,7 +41,9 @@
 					   @click="posterClick(index)"
 					   :alt="movie.title + ' poster'">
 		  
-				  <div class="imageInfo">{{ movie.posterindex }}</div>
+					   <div class="imageInfo" v-if="movie.posters.length > 1">
+						Poster {{ movie.posterindex + 1 }} of {{ movie.posters.length }}
+					  </div>
 		  
 				  <p class="title">{{ movie.title }} ({{ movie.country }})</p>
 				  <p class="score"><i class="bi bi-star"></i> {{ movie.iscore }}</p>

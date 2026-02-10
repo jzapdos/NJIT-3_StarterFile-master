@@ -66,6 +66,7 @@ body {
 /* This shapes your IMDB score area */
 .score {
     background-color: #39D1B4;
+    border-radius: 100%;
     color: #fff;
     font-size: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -119,3 +120,26 @@ body {
 }
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
+.likes{
+    background-color: rgb(1, 189, 1);
+    color:white;
+}
+.likes:hover{
+    background-color: lightgreen;
+    cursor:pointer;
+}
+
+.dislikes{
+    background-color: rgb(241, 28, 28);
+    color:white;
+}
+.dislikes:hover{
+    background-color: rgb(234, 88, 88);
+    cursor:pointer;
+}
+
+.poster {
+    width: 100%;
+    height: 500px;        /* pick a consistent height */
+    object-fit: cover;    /* fills the box, may crop edges */
+  }

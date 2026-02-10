@@ -68,5 +68,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "Jurrasic Park",
+            "iscore": 8.2,
+            "rating": "PG-13",
+            "runtime": 127,
+            "released": [1993, 6, 11],
+            "country": "USA",
+            "posters": ["img/park1.jpg", "img/park2.jpg", "img/park3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0107290/",
+            "website": "https://www.rottentomatoes.com/m/jurassic_park",
+            "likes": 713,
+            "dislikes": 211,
+            "posterindex": 0
+      },
+      {
+            "title": "Chainsawman: Reze Arc",
+            "iscore": 8.4,
+            "rating": "R",
+            "runtime": 100,
+            "released": [2025, 10, 24],
+            "country": "Japan",
+            "posters": ["img/man1.jpg", "img/man2.jpg", "img/man3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt30472557/",
+            "website": "https://www.fandango.com/chainsaw-man-the-movie-reze-arc-2025-241288/movie-overview",
+            "likes": 923,
+            "dislikes": 131,
+            "posterindex": 0
+      },
+      {
+            "title": "How to Train Your Dragon",
+            "iscore": 8.1,
+            "rating": "PG",
+            "runtime": 98,
+            "released": [2010, 3, 26],
+            "country": "USA",
+            "posters": ["img/drag1.jpg", "img/drag2.jpg", "img/drag3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0892769/?ref_=tt_mlt_i_1",
+            "website": "https://www.rottentomatoes.com/m/how_to_train_your_dragon",
+            "likes": 1247,
+            "dislikes": 11,
+            "posterindex": 0
       }
 ]
