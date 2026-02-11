@@ -5,7 +5,7 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background-color: rgb(187, 184, 184);
 }
 
 /* This stylizes the header area */
@@ -13,8 +13,8 @@ body {
     padding: 15px;
 }
 .header h1 {
-    display: inline-block;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 /* This stylizes the main page area */
@@ -22,6 +22,8 @@ body {
     background-color: #f2f2f2;
     padding: 40px 0;
 }
+
+
 
 /* This stylizes the poster area and poster images */
 .thumbnail {
@@ -65,9 +67,9 @@ body {
 
 /* This shapes your IMDB score area */
 .score {
-    background-color: #39D1B4;
+    background-color: #fffb00;
     border-radius: 100%;
-    color: #fff;
+    color: #000000;
     font-size: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: 200;
